@@ -12,4 +12,8 @@ class Color extends React.Component {
     }
 }
 
-export default Color;
+function Color(props) {
+
+    return(<button onClick={() => this.props.handleClick(this.props.color)}>Post {this.props.color}</button>)
+
+}
