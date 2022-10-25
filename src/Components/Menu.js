@@ -1,15 +1,19 @@
 import React from 'react';
 import Color from './Color';
+/* Add any imports you think you might need here! */
 
 const Menu = (props) => { 
-  
+
     return (
       <div className="colorOptions">
-          <Color handleClick = {props.makePost} color="Red" />
-          <Color handleClick = {props.makePost} color="Orange" />
-          <Color handleClick = {props.makePost} color="Yellow" />
-          <Color handleClick = {props.makePost} color="Blue" />
 
+          <Color color="green" handleClick={props.vivid}></Color>
+
+          <Color color="orange" handleClick={props.vivid}></Color>
+
+          <Color color="blue" handleClick={props.vivid}></Color>
+          
+          <Color color="yellow" handleClick={props.vivid}></Color>
       </div>
     );
 }

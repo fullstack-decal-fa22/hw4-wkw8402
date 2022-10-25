@@ -4,19 +4,16 @@ import Menu from './Menu';
 import Block from './Block';
 
 const Feed = () => {
+    
+    const[prevs, setting] = useState([]);
+    const colorful = (color) => {setting([color, ...prevs]);};
 
-    const [prevs, setPost] = useState([]);
+    const posts = prevs.map((block) => {return <Block color={block}/>;});
 
-    const create = (post) => {
-      setPost([post, ...prevs]);
-    };
-  
     return (
         <div>
-            <Menu create = {create}></Menu>
-            {prevs.map((current) => (
-                <Block color = {current} />
-            ))}
+            <Menu vivid={colorful}></Menu>
+            {posts}
         </div>
     );
 }
